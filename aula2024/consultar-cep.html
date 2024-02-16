@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>consultar cep</title>
+
+
+
+    <script>
+        function consultarCep(cep){
+            const url = `https://viacep.com.br/ws/${cep}/json/`
+            fetch(url)
+            .then(response=> response.json())
+            .then(data =>  mostrarResultado(data) )
+            .catch(error => alert(error))
+     
+     }
+
+        function mostrarResultado(data){
+            console.log(data)
+            
+
+
+        }
+     
+         </script>
+
+</head>
+<body>
+
+
+    
+
+
+<h2>consultar cep</h2>
+<p>cep: <input type="text" onblur="consultarCep(this.value)"/></p>
+<p>rua: <input type="text" id="rua" /></p>
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <title>Introdução Angular</title>
+
+    <link rel="styleSheet" href="folha-estilo.css" />
+
+    
+    
+
+    <style>
+        #nome {
+            color: red;
+        }
+
+        #principal{
+            border: 1px solid black;
+            width: 100%;
+            height: 400px;
+        }
+        .interno{
+            border: 1px solid  red;
+            width: 33%;
+            height: 95%;
+            float: left;
+            margin-left: 1px;
+        }
+        .nome1{
+            color:  green;
+        }
+        .nome2{
+            color: palevioletred;
+        }
+
+        #elemento{
+            width: 200px;
+            height: 100%;
+            background-color: lightblue ;
+        }
+
+
+    </style>
+
+    <script>
+    function mudarcor(){
+
+        debugger;
+        let nome = document.getElementById("textoAlterado");
+        nome.style.backgroundColor = 'ligthblue';
+        nome.innerHTML = "palmeiras nao tem ......";
+
+    }
+
+
+    function somar(){
+        debugger
+        let primeiroValor = document.getElementById("primeiroValor").value;
+        let segundoValor = document.getElementById("segundoValor").value;
+        let resultado = document.getElementById("resultado");
+        let somar = parseInt(primeiroValor) + parseInt(segundoValor);
+        resultado.value =somar;
+
+        
+
+    }
+
+    </script>
+
+
+</head>
+
+<body>
+
+    <input type="button"value="teste css" onclick="mudarcor()">
+
+    <p id="nome">henrique bendzius</p>
+
+    <p id="textoAlterado" >Introducão ao Angular</p>
+
+    <div id="principal">
+        <div class="interno">
+
+            <h2 class="nome">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Accusamus, sapiente quidem architecto rem voluptatem quaerat!</h2>
+
+
+                 <h2 class="nome1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Accusamus, sapiente quidem architecto rem voluptatem quaerat!</h2>
+        </div>
+
+
+        <div class="interno">
+            <h2 class="nome1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusamus, sapiente quidem architecto rem voluptatem quaerat!</h2>
+
+                <h2 class="nome">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Accusamus, sapiente quidem architecto rem voluptatem quaerat!</h2>    
+        </div>
+
+        <div class="interno">
+            <h2 class="nome2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusamus, sapiente quidem architecto rem voluptatem quaerat!</h2>
+
+                <h2 class="nome">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Accusamus, sapiente quidem architecto rem voluptatem quaerat!</h2>
+        </div>
+
+
+    </div>
+
+
+    <hr>
+
+
+    <p>primeiro valor<input type="text" id="primeiroValor"></p>
+    <p>segundo valor <input type="text" id="segundoValor"></p>
+    <p>resultado <input type="text" id="resultado"></p>
+
+    <input type="button" value="somar"onclick="somar()"/>
+
+
+ 
+
+
+
+
+</body>
+
+</html>
